@@ -9,6 +9,8 @@ namespace NodeCanvas.Tasks.Actions {
 		private BlobertStats blobstats;
 		private float restRate = 8f;
 
+		private bool caseSwitch;
+
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit() {

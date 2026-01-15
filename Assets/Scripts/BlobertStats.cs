@@ -7,7 +7,7 @@ public class BlobertStats : MonoBehaviour
     // starting/max stats
     public float maxEnergy;
     public float maxSize;
-    
+    public TMPro.TMP_Text energyText;
 
     // changing stats
     public float energy;
@@ -25,11 +25,10 @@ public class BlobertStats : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Debug.Log(energy);
+        energyText.text = "energy: " + energy.ToString();
     }
-
 
     public void OnTriggerEnter(Collider other)
     {

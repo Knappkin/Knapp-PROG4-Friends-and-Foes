@@ -31,7 +31,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 			if (blobstats.energy <= 0)
 			{
-				energyCost = 0;
+				blobstats.energy = 0;
 				EndAction(true);
 			}
 		}
