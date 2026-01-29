@@ -11,12 +11,14 @@ namespace NodeCanvas.Tasks.Actions {
 
         private Blackboard agentBlackBoard;
 		private spellList spellList;
+		private GameObject spellListObj;
 		Spells spellUsed;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
             agentBlackBoard = agent.GetComponent<Blackboard>();
-            spellList = agentBlackBoard.GetVariableValue<spellList>("spellList");
+            spellListObj = agentBlackBoard.GetVariableValue<GameObject>("spellList2");
+			spellList = spellListObj.GetComponent<spellList>();
 			return null;
 		}
 
@@ -24,7 +26,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			int roll = Random.Range (0, 8);
+			int roll = Random.Range (0, 7);
 			spellUsed = spellList.sL[roll];
 			Debug.Log(spellUsed.spellName);
 			EndAction(true);

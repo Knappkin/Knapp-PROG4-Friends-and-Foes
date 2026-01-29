@@ -266,11 +266,11 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"maxMana":{"_value":100.0,"_name":"maxMana","_id":"44d04aab-ae8e-455d-a25a-8acebf896937","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"regenRate":{"_name":"regenRate","_id":"a63d28bf-89e6-4404-b3f9-224ae57048dc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"regenMult":{"_name":"regenMult","_id":"aa463e14-8c19-4783-9ccd-de45802e4d3b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"spellList":{"_value":1,"_name":"spellList","_id":"25fe1178-7b5e-458b-a499-8999c0ddc873","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.MonoBehaviour,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"spellList2":{"_value":1,"_name":"spellList2","_id":"930139ac-9c95-4bcc-9bcf-9bf9641a2672","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
-  - {fileID: 1251430697}
+  - {fileID: 1251430696}
   _serializedVariables:
   - _json: '{"_name":"manaValue","_id":"5d50373f-9de7-45b9-bfcf-efc396e34dae","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
@@ -284,11 +284,11 @@ MonoBehaviour:
   - _json: '{"_name":"regenMult","_id":"aa463e14-8c19-4783-9ccd-de45802e4d3b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":1,"_name":"spellList","_id":"25fe1178-7b5e-458b-a499-8999c0ddc873","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.MonoBehaviour,
+  - _json: '{"_value":1,"_name":"spellList2","_id":"930139ac-9c95-4bcc-9bcf-9bf9641a2672","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references:
     - {fileID: 0}
-    - {fileID: 1251430697}
+    - {fileID: 1251430696}
 --- !u!114 &859295582
 MonoBehaviour:
   m_ObjectHideFlags: 0
