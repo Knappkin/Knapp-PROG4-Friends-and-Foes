@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 284220092}
   - component: {fileID: 284220091}
   - component: {fileID: 284220090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Torus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7027,7 +7027,7 @@ GameObject:
   - component: {fileID: 286146971}
   - component: {fileID: 286146970}
   - component: {fileID: 286146969}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7304,7 +7304,7 @@ GameObject:
   - component: {fileID: 918947127}
   - component: {fileID: 918947132}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: POV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7436,6 +7436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navAgent: {fileID: 918947127}
+  terrainLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &948068224
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,7 +7735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696521296}
   - component: {fileID: 1696521297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Game World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7804,7 +7807,7 @@ GameObject:
   - component: {fileID: 1737091394}
   - component: {fileID: 1737091393}
   - component: {fileID: 1737091392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10532,7 +10535,7 @@ GameObject:
   - component: {fileID: 1906535628}
   - component: {fileID: 1906535627}
   - component: {fileID: 1906535631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
