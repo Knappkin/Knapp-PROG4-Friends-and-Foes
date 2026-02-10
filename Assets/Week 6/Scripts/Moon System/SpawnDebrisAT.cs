@@ -31,12 +31,12 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			EndAction(true);
+			//EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-
+			//Debug.Log(debrisTimer);
 			if (isNightBBP.value)
 			{
 				debrisTimer += Time.deltaTime;
@@ -57,7 +57,15 @@ namespace NodeCanvas.Tasks.Actions {
 
 		private void SpawnDebris()
 		{
+			Vector3 spawnLocation;
+			spawnLocation.x = Random.Range(minDebrisSpawnRange, maxDebrisSpawnRange);
+			int spawnDirection = (Random.Range(0, 2));
+			Debug.Log(spawnDirection);
+			spawnLocation.y = 0;
+			spawnLocation.z = Random.Range(minDebrisSpawnRange,maxDebrisSpawnRange);
+
 		GameObject debrisInstance = GameObject.Instantiate(debrisPrefab.value);
+			debrisInstance.transform.position = spawnLocation;
 		}
 		//Called when the task is disabled.
 		protected override void OnStop() {

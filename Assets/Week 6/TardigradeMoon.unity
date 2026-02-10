@@ -631,14 +631,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{"isNight":{"_name":"isNight","_id":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  _serializedBlackboard: '{"_variables":{"isNight":{"_value":true,"_name":"isNight","_id":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"debrisPrefab":{"_value":1,"_name":"debrisPrefab","_id":"7889b256-6abb-44ee-8737-f9a7cc38e3d9","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 2100233686}
   _serializedVariables:
-  - _json: '{"_name":"isNight","_id":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  - _json: '{"_value":true,"_name":"isNight","_id":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"debrisPrefab","_id":"7889b256-6abb-44ee-8737-f9a7cc38e3d9","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
@@ -659,14 +659,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.8522974,"b":0.2311321,"a":1.0},"_name":"Day","_position":{"x":92.09394,"y":201.2255},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.735849,"g":0.1561944,"b":0.6485028,"a":1.0},"_name":"Dusk","_position":{"x":238.1902,"y":381.9572},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.1386614,"g":0.2394969,"b":0.7169812,"a":1.0},"_name":"Night","_position":{"x":94.06824,"y":484.7031},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.5804787,"b":0.25,"a":1.0},"_name":"Dawn","_position":{"x":-82.2063,"y":258.2687},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"isNightBBP":{},"debrisPrefab":{},"$type":"NodeCanvas.Tasks.Actions.SpawnDebrisAT"}]},"_position":{"x":-432.1711,"y":222.2418},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.8522974,"b":0.2311321,"a":1.0},"_name":"Day","_position":{"x":92.09394,"y":201.2255},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.735849,"g":0.1561944,"b":0.6485028,"a":1.0},"_name":"Dusk","_position":{"x":238.1902,"y":381.9572},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.1386614,"g":0.2394969,"b":0.7169812,"a":1.0},"_name":"Night","_position":{"x":94.06824,"y":484.7031},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.5804787,"b":0.25,"a":1.0},"_name":"Dawn","_position":{"x":-82.2063,"y":258.2687},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"isNightBBP":{"_name":"isNight","_targetVariableID":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d"},"debrisPrefab":{"_name":"debrisPrefab","_targetVariableID":"7889b256-6abb-44ee-8737-f9a7cc38e3d9"},"minDebrisSpawnRange":10.0,"maxDebrisSpawnRange":15.0,"minDebrisSpawnTime":5.0,"maxDebrisSpawnTime":10.0,"$type":"NodeCanvas.Tasks.Actions.SpawnDebrisAT"}]},"_position":{"x":-432.1711,"y":222.2418},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 1085.1909, y: 142.0226}
-    _zoomFactor: 1
+    _translation: {x: 769.11646, y: 270.37527}
+    _zoomFactor: 0.36794618
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
