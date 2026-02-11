@@ -450,6 +450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1569982346}
+  - component: {fileID: 1569982347}
   m_Layer: 0
   m_Name: GameWorld
   m_TagString: Untagged
@@ -473,6 +474,38 @@ Transform:
   - {fileID: 956146591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1569982347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569982345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1799998426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -547,6 +580,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3172d746196f1048a6daa3573cee8d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1799998428}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3172d746196f1048a6daa3573cee8d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1799998430}
   m_SourcePrefab: {fileID: 100100000, guid: e3172d746196f1048a6daa3573cee8d0, type: 3}
 --- !u!1 &1799998427 stripped
 GameObject:
@@ -582,15 +618,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.7819171,"b":0.3254717,"a":1.0},"_name":"Wander","_position":{"x":569.0,"y":384.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.4799813,"b":0.1933962,"a":1.0},"_name":"Search","_position":{"x":740.0,"y":319.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move
-    to Destination","_position":{"x":1134.0,"y":389.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.7735849,"g":0.4996909,"b":0.3247597,"a":1.0},"_name":"Drag
-    Debris","_position":{"x":715.0,"y":447.0},"$type":"NodeCanvas.StateMachines.ActionState"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.7819171,"b":0.3254717,"a":1.0},"_name":"Wander","_position":{"x":569.0,"y":384.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.SearchAT"}]},"_color":{"r":1.0,"g":0.4799813,"b":0.1933962,"a":1.0},"_name":"Search","_position":{"x":745.0,"y":263.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move
+    to Destination","_position":{"x":923.8922,"y":343.2175},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.7735849,"g":0.4996909,"b":0.3247597,"a":1.0},"_name":"Drag
+    Debris","_position":{"x":782.0,"y":505.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_nestedFSM":{},"_name":"Day
+    Exploration","_position":{"x":1381.32,"y":465.2974},"$type":"NodeCanvas.StateMachines.NestedFSMState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 0, y: 0}
+    _translation: {x: -3.134142, y: 151.62352}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -600,6 +637,28 @@ MonoBehaviour:
   _updateMode: 0
   _graph: {fileID: 0}
   _blackboard: {fileID: 1799998428}
+--- !u!195 &1799998430
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799998427}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1880132323
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,14 +718,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.8522974,"b":0.2311321,"a":1.0},"_name":"Day","_position":{"x":92.09394,"y":201.2255},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.735849,"g":0.1561944,"b":0.6485028,"a":1.0},"_name":"Dusk","_position":{"x":238.1902,"y":381.9572},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.1386614,"g":0.2394969,"b":0.7169812,"a":1.0},"_name":"Night","_position":{"x":94.06824,"y":484.7031},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.5804787,"b":0.25,"a":1.0},"_name":"Dawn","_position":{"x":-82.2063,"y":258.2687},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"isNightBBP":{"_name":"isNight","_targetVariableID":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d"},"debrisPrefab":{"_name":"debrisPrefab","_targetVariableID":"7889b256-6abb-44ee-8737-f9a7cc38e3d9"},"minDebrisSpawnRange":10.0,"maxDebrisSpawnRange":15.0,"minDebrisSpawnTime":5.0,"maxDebrisSpawnTime":10.0,"$type":"NodeCanvas.Tasks.Actions.SpawnDebrisAT"}]},"_position":{"x":-432.1711,"y":222.2418},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"boolVariable":{"_name":"isNight","_targetVariableID":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d"},"setTo":0,"$type":"NodeCanvas.Tasks.Actions.SetBoolean"}]},"_color":{"r":1.0,"g":0.8522974,"b":0.2311321,"a":1.0},"_name":"Day","_position":{"x":92.09394,"y":201.2255},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.735849,"g":0.1561944,"b":0.6485028,"a":1.0},"_name":"Dusk","_position":{"x":238.1902,"y":381.9572},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"boolVariable":{"_name":"isNight","_targetVariableID":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d"},"$type":"NodeCanvas.Tasks.Actions.SetBoolean"}]},"_color":{"r":0.1386614,"g":0.2394969,"b":0.7169812,"a":1.0},"_name":"Night","_position":{"x":94.06824,"y":484.7031},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.5804787,"b":0.25,"a":1.0},"_name":"Dawn","_position":{"x":-82.2063,"y":258.2687},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"isNightBBP":{"_name":"isNight","_targetVariableID":"3c91756e-ebfd-4dee-aaa1-943dc0fd1c8d"},"debrisPrefab":{"_name":"debrisPrefab","_targetVariableID":"7889b256-6abb-44ee-8737-f9a7cc38e3d9"},"minDebrisSpawnRange":10.0,"maxDebrisSpawnRange":15.0,"minDebrisSpawnTime":5.0,"maxDebrisSpawnTime":10.0,"$type":"NodeCanvas.Tasks.Actions.SpawnDebrisAT"}]},"_position":{"x":-432.1711,"y":222.2418},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 769.11646, y: 270.37527}
-    _zoomFactor: 0.36794618
+    _translation: {x: 933.3216, y: 189.70255}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -706,6 +765,10 @@ PrefabInstance:
     - target: {fileID: 2496718606150705108, guid: 696f11b663836b74fba32fcaa5d77ef9, type: 3}
       propertyPath: m_Name
       value: Debris
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496718606150705108, guid: 696f11b663836b74fba32fcaa5d77ef9, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4503367097448348907, guid: 696f11b663836b74fba32fcaa5d77ef9, type: 3}
       propertyPath: m_LocalPosition.x
