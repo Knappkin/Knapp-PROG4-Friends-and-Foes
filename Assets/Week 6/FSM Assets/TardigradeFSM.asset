@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
-  m_Name: FSM
+  m_Name: TardigradeFSM
   m_EditorClassIdentifier: 
-  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.7819171,"b":0.3254717,"a":1.0},"_name":"Wander","_position":{"x":569.0,"y":384.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"spotTargetBBP":{},"$type":"NodeCanvas.Tasks.Actions.SearchAT"}]},"_color":{"r":1.0,"g":0.4799813,"b":0.1933962,"a":1.0},"_name":"Search","_position":{"x":745.0,"y":263.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.7819171,"b":0.3254717,"a":1.0},"_name":"Wander","_position":{"x":569.0,"y":384.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"spottedTargetBBP":{},"spotDebrisBBP":{},"spotDownedFriendBBP":{},"scanRangeBBP":{},"uiManagerBBP":{},"$type":"NodeCanvas.Tasks.Actions.SearchAT"}]},"_color":{"r":1.0,"g":0.4799813,"b":0.1933962,"a":1.0},"_name":"Search","_position":{"x":745.0,"y":263.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move
     to Destination","_position":{"x":923.8922,"y":343.2175},"$type":"NodeCanvas.StateMachines.ActionState"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.7735849,"g":0.4996909,"b":0.3247597,"a":1.0},"_name":"Drag
     Debris","_position":{"x":782.0,"y":505.0},"$type":"NodeCanvas.StateMachines.ActionState"},{"_nestedFSM":{"_value":1},"_name":"Day
     Exploration","_position":{"x":1268.855,"y":395.2719},"$type":"NodeCanvas.StateMachines.NestedFSMState"},{"_nestedFSM":{"_value":2},"_position":{"x":996.2731,"y":583.5466},"$type":"NodeCanvas.StateMachines.NestedFSMState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
@@ -24,7 +24,7 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 224, y: -37}
-    _zoomFactor: 1
+    _translation: {x: -282, y: -28}
+    _zoomFactor: 0.7466829
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}
