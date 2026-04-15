@@ -63,7 +63,7 @@ namespace NodeCanvas.Tasks.Actions {
 			Debug.Log(spawnDirection);
 			spawnLocation.y = 0;
 			spawnLocation.z = Random.Range(minDebrisSpawnRange,maxDebrisSpawnRange);
-
+			Debug.Log("Debris Spawned");
 		GameObject debrisInstance = GameObject.Instantiate(debrisPrefab.value);
 			debrisInstance.transform.position = spawnLocation;
 		}
