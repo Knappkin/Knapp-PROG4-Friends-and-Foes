@@ -1,5 +1,7 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,7 +11,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public BBParameter<GameObject> spottedTargetBBP;
 		public BBParameter<bool> spotDebrisBBP;
-		public BBParameter<bool> spotDownedFriendBBP;
+		public BBParameter<bool> spotFallenFriendBBP;
 		public BBParameter<float> scanRangeBBP;
 		public BBParameter<UiManager> uiManagerBBP;
 		//Use for initialization. This is called only once in the lifetime of the task.
@@ -23,24 +25,71 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 			//EndAction(true);
+			StartCoroutine(ScanTimer());
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+			
 			Collider[] hits = Physics.OverlapSphere(agent.transform.position, scanRangeBBP.value);
+
+			Collider chosenHit;
 
 			if (hits.Length > 0)
 			{
+				chosenHit = hits[0];
 				for (int i = 0; i < hits.Length; i++)
 				{
-
-					if (hits[i].gameObject.layer == 10)
+                    float agentToIDist = Vector3.Distance(agent.transform.position, hits[i].gameObject.transform.position);
+                    float agentToChosenDist = Vector3.Distance(agent.transform.position, chosenHit.gameObject.transform.position);
+                    if (hits[i].gameObject.layer == 11)
 					{
-						uiManagerBBP.value.DrawExclamationUI(agent.transform);
-						spotDebrisBBP.value = true;
+						if (chosenHit.gameObject.layer != 11)
+						{
+							chosenHit = hits[i];
+						}
+
+						else
+						{
+							if (agentToIDist < agentToChosenDist)
+							{
+								chosenHit = hits[i];
+							}
+						}
+					}
+
+					
+					else if (hits[i].gameObject.layer == 10)
+					{
+                        if (agentToIDist < agentToChosenDist)
+						{
+							chosenHit = hits[i];
+						}
+                        
 					}
 				}
-			}
+                uiManagerBBP.value.DrawExclamationUI(agent.transform);
+
+
+				if (chosenHit.gameObject.layer == 11)
+				{
+					spotFallenFriendBBP.value = true;
+					//EndAction(true);
+				}
+
+				else if (chosenHit.gameObject.layer == 10)
+				{
+					spotDebrisBBP.value = true;
+					//EndAction (true);
+				}
+
+				else
+				{
+					spotDebrisBBP.value = false;
+					spotFallenFriendBBP.value = false;
+				}
+               // spotDebrisBBP.value = true;
+            }
 		}
 
 		//Called when the task is disabled.
@@ -51,6 +100,17 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called when the task is paused.
 		protected override void OnPause() {
 			
+		}
+
+		private void ScanArea()
+		{
+
+		}
+		private IEnumerator ScanTimer()
+		{
+			yield return new WaitForSeconds(3);
+			Debug.Log("Scan Failed");
+			EndAction();
 		}
 	}
 }
