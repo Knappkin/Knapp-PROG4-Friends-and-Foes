@@ -73,19 +73,22 @@ namespace NodeCanvas.Tasks.Actions {
 
 				if (chosenHit.gameObject.layer == 11)
 				{
+					spottedTargetBBP.value = chosenHit.gameObject;
 					spotFallenFriendBBP.value = true;
 					//EndAction(true);
 				}
 
 				else if (chosenHit.gameObject.layer == 10)
 				{
-					spotDebrisBBP.value = true;
+                    spottedTargetBBP.value = chosenHit.gameObject;
+                    spotDebrisBBP.value = true;
 					//EndAction (true);
 				}
 
 				else
 				{
-					spotDebrisBBP.value = false;
+                    spottedTargetBBP.value = null;
+                    spotDebrisBBP.value = false;
 					spotFallenFriendBBP.value = false;
 				}
                // spotDebrisBBP.value = true;
